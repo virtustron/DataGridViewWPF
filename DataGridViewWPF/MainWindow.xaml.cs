@@ -23,6 +23,8 @@ namespace DataGridViewWPF
         //PhonesContainer phones;
         List<Phone> phones;
 
+        CommunicationDeviceColllection devices;
+
 
         public MainWindow()
         {
@@ -30,10 +32,35 @@ namespace DataGridViewWPF
             //phones = new PhonesContainer();
             phones = new List<Phone>();
             phonesGrid.ItemsSource = phones;
+
+
+
+            devices = new CommunicationDeviceColllection();
         }
 
         private void AddButton_Click(object sender, RoutedEventArgs e)
         {
+            CommunicationDevice device1 = new Phone();
+            devices.Add(device1);
+
+
+            CommunicationDevice device2 = new SmartPhone();
+            devices.Add(device2);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             Phone simplePhone;
             simplePhone = new Phone();
 
@@ -52,6 +79,15 @@ namespace DataGridViewWPF
             //phonesGrid.Items.Refresh();
             //phonesGrid.ItemsSource = null;
             //phonesGrid.ItemsSource = phones;
+
+
+
+
+
+
+
+
+
         }
 
 

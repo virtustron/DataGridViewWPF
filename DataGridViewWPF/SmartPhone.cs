@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace DataGridViewWPF
 {
-    class Phone : CommunicationDevice
+    class SmartPhone : CommunicationDevice
     {
-        
-        public bool QwertyKeyboard { get; set; }
+        public int OperationSystem { get; set; }
     }
 }
