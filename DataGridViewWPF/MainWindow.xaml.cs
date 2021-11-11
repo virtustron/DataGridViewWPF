@@ -20,14 +20,16 @@ namespace DataGridViewWPF
     /// </summary>
     public partial class MainWindow : Window
     {
-        PhonesContainer phones;
+        //PhonesContainer phones;
+        List<Phone> phones;
 
 
         public MainWindow()
         {
             InitializeComponent();
-            phones = new PhonesContainer();
-            //phonesGrid.ItemsSource = phones;
+            //phones = new PhonesContainer();
+            phones = new List<Phone>();
+            phonesGrid.ItemsSource = phones;
         }
 
         private void AddButton_Click(object sender, RoutedEventArgs e)
@@ -44,7 +46,7 @@ namespace DataGridViewWPF
 
 
 
-            phones.Add("iPhone 6S", "Apple", 54990);
+            //phones.Add("iPhone 6S", "Apple", 54990);
             phones.Add(simplePhone);
 
             //phonesGrid.Items.Refresh();
