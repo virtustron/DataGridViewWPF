@@ -19,5 +19,29 @@ namespace DataGridViewWPF
         {
             items.Add(item);
         }
+
+        /*
+        public void Add(string Title, string Company, int Price)
+        {
+            CommunicationDevice item = new CommunicationDevice { Title = Title, Company = Company, Price = Price };
+
+            items.Add(item);
+        }
+        */
+
+        public string DisplayItems()
+        {
+            string content = "";
+            
+            foreach (var item in items)
+            {
+                content = content + item.Display();
+            }
+
+            return content;
+        }
+
+
+
     }
 }

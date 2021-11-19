@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DataGridViewWPF
 {
-    class CommunicationDevice
+    abstract class CommunicationDevice
     {
         private string title;
 
@@ -31,5 +31,8 @@ namespace DataGridViewWPF
         }
         public string Company { get; set; }
         public int Price { get; set; }
+
+
+        public abstract string Display();
     }
 }

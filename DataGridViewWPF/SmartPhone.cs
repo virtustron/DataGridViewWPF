@@ -8,6 +8,15 @@ namespace DataGridViewWPF
 {
     class SmartPhone : CommunicationDevice
     {
-        public int OperationSystem { get; set; }
+        public String OperationSystem { get; set; }
+
+        public override string Display()
+        {
+            string content = "";
+            content = this.Title + "; " + this.Company + "; " + this.Price.ToString() + "; " + this.OperationSystem;
+
+            return content;
+
+        }
     }
 }
